@@ -47,8 +47,6 @@ function Hero() {
             <ModalComponent text="Signup" variant = "primary" />
             <ModalComponent text="Login" variant = "danger" />
           </ButtonContainer>
-          
-            
         </HeaderContainer>
       </Container>
     </HeroComponent>
