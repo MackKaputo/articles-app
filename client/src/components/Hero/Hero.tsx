@@ -46,8 +46,8 @@ function Hero() {
             by highly reputable individuals
           </SubHeading>
           <ButtonContainer>
-            <ModalComponent text="Signup" variant = "primary" />
-            <ModalComponent text="Login" variant = "danger" />
+            <ModalComponent text="Signup" variant = "primary" isSignupFlow={true}/>
+            <ModalComponent text="Login" variant = "danger" isSignupFlow={false}/>
           </ButtonContainer>
         </HeaderContainer>
       </Container>
