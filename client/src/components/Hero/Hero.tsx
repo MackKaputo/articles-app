@@ -29,8 +29,10 @@ const SubHeading = styled.h2`
   text-align: center;
 `
 const ButtonContainer = styled.div`
-  display: inline-block;
-  margin-left: 13%
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
 `
 
 function Hero() {
