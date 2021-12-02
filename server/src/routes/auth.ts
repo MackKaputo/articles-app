@@ -136,4 +136,8 @@ router.post("/login", async (req, res) => {
 })
 
 
+router.get("/me", async (req, res) => {
+    res.send("me route")
+})
+
 export default router

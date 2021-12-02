@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from "axios"
 import styled from "styled-components"
 import { Button, Modal, InputGroup, FormControl } from "react-bootstrap"
-
+import { useNavigate } from "react-router-dom"
 
 interface ModalProps {
     text: string;
@@ -24,6 +24,8 @@ function ModalComponent({ text, variant, isSignupFlow }: ModalProps) {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const navigate = useNavigate()
     
     const handleClick = async () => {
         let data 
@@ -47,6 +49,7 @@ function ModalComponent({ text, variant, isSignupFlow }: ModalProps) {
         }
 
         localStorage.setItem("token", data.data.token)
+        navigate("/articles")
     }
 
     return (
