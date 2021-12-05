@@ -57,6 +57,17 @@ const ArticlesPlan = () => {
         setPrices(response.data)
     }
 
+    const createSession = async (priceId: string) => {
+        const { data: response } = await axios.post(
+            "http://localhost:8080/subs/session",
+            {
+                priceId,
+            }
+        )
+
+        window.location.href = response.url
+    }
+
     return (
         <Container>
             <CardsContainer>
@@ -74,7 +85,7 @@ const ArticlesPlan = () => {
                                 <Card.Title style = {{ fontSize: "2rem"}}>
                                     {price.nickname}
                                 </Card.Title>
-                                <Button variant="primary" className="mt-3">Buy now</Button>
+                                <Button variant="primary" className="mt-3" onClick={() => createSession(price.id)}>Buy now</Button>
                             </Card.Body>
                         </Card>
                     )
