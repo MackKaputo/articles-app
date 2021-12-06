@@ -53,7 +53,7 @@ const ArticlesPlan = () => {
         const {data: response} = await axios.get(
             "http://localhost:8080/subs/prices"
         )
-
+        //console.log("FETCHING PRICES")
         setPrices(response.data)
     }
 

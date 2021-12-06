@@ -1,5 +1,6 @@
 import express from "express"
 import User from "../models/user"
+import Article from "../models/article"
 import { checkAuth } from "../middleware/checkAuth"
 import { stripe } from "../utils/stripe"
 
@@ -9,7 +10,7 @@ router.get("/prices", checkAuth, async (req, res) => {
     const prices = await stripe.prices.list({
         apiKey: process.env.STRIPE_SECRET_KEY
     })
-
+    console.log("requesting for prices")
     return res.json(prices)
 })
 

@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom"
-import { Articles, LandingPage, ArticlesPlan } from './pages'
+import { Articles, LandingPage, ArticlesPlan, NotFound } from './pages'
 import { ProtectedRoute } from "./routes/ProtectedRoute"
 import { Nav } from './components'
+
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Route path="/article-plans" element={<ProtectedRoute />}>
           <Route path="/article-plans" element={<ArticlesPlan />} ></Route>
         </Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
   );
