@@ -1,3 +1,3 @@
 # articles-app
 
-Membership/Subscription based app
+Subscription based app
